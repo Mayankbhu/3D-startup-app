@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(0, 0, 0);
+  color: #f4f4f4e3;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  max-height: 100vh;
+  overflow: hidden;
+  line-height: 1.5;
+}
+.bg_img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+.ly {
+  position: absolute;
+  height: 0vh;
+  width: 30rem;
+  top: 20px;
+  right: 0;
+  box-shadow: 0 0 700px 15px #e2e2e2;
+  rotate: -30deg;
+  z-index: -1;
+}
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.8rem;
+}
+.logo {
+  font-size: 2rem;
+  color: #f4f4f4e3;
+}
+nav {
+  display: flex;
+  gap: 2rem;
+}
+nav a {
+  text-decoration: none;
+  color: #f4f4f4e3;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+nav a:hover {
+  background-color: #f4f4f4e3;
+  color: #000;
+}
+nav a.active {
+  background-color: #f4f4f4e3;
+  color: #000;
+}
+.sing_btn {
+  background-color: #f4f4f4e3;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+.sing_btn:hover {
+  background-color: #000;
+  color: #f4f4f4e3;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+}
+.content {
+  max-width: 600px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.tag_box {
+  position: relative;
+  width: 10rem;
+  height: 1.5rem;
+  border-radius: 50px;
+  border: 2px solid linear-gradient(90deg, #f4f4f4e3, #000);
+  background: linear-gradient(to right, #6e6e6ee3, #bf42e5, rgb(0, 47, 255));
+  background-size: 200% 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  animation: tg 2.5s linear infinite;
+  overflow: hidden;
+}
+@keyframes tg {
+  to {
+    background-position: 200%;
+  }
+}
+.tag_box .tag {
+  position: absolute;
+  inset: 3px 3px 3px 3px;
+  background-color: #000000;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.email {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  line-height: 1.2;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.discription {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+  color: #f4f4f4e3;
+}
+.btn {
+  display: flex;
+  gap: 1rem;
+}
+.documantation1 {
+  color: #971e99;
+  text-decoration: none;
+  border: 1px solid #2a2a2a;
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  background-color: #0000006c;
+}
+.documantation1:hover {
+  background-color: #000000e3;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.documantation2 {
+  color: gray;
+  text-decoration: none;
+  border: 1px solid #2a2a2a;
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  background-color: #0000006c;
+}
+.documantation2:hover {
+  background-color: #000000e3;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.m3d{
+  position: absolute;
+  width: 100%;
+  right: -20%;
+  top: 0;
+}
+@media (max-width: 1300px) {
+  .content {
+    
+  }
+  header {
+  padding: 1rem 0.5rem;
+  }
+  .m3d{
+    scale: 0.6;
+    top: -11%;
+    right: -30%;
+  }
+  content {
+    
+    max-width: 555px;
+    padding: 1rem;
+  }
+} 
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 0.1rem;
+  }
+  nav a{
+     display: none;
+  }
+  .email{
+    font-size: 2rem;
+  }
+  .content {
+  
+    margin-top: 23rem;
+  }
+  .m3d{
+    scale: 0.5;
+    top: -20%;
+    right: 0;
+  }
+  .btn {
+    display: flex
+;
+    gap: 1rem;
+    margin: 0px -27px;
+}
+}
